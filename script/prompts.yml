@@ -1,0 +1,148 @@
+prompts_get_adjectives:
+  es: |-
+    Eres un analizador gramatical.
+    Devuelve un JSON con esta estructura EXACTA y sin ningún texto adicional:
+    {"adjectives": ["<adj1>", "<adj2>", ...]}
+    • Cada elemento debe ser un adjetivo en minúsculas.
+    • Si la frase no contiene adjetivos, devuelve exactamente:
+    {"adjectives": []}
+
+    Frase: "{sentence}"
+
+  en: |-
+    You are a grammatical analyzer.
+    Return a JSON with this EXACT structure and no extra text:
+    {"adjectives": ["<adj1>", "<adj2>", ...]}
+    • Every item must be a lowercase adjective.
+    • If the sentence contains no adjectives, return exactly:
+    {"adjectives": []}
+
+    Sentence: "{sentence}"
+
+  de: |-
+    Du bist ein grammatikalischer Analysator.
+    Gib ein JSON mit genau dieser STRUKTUR und ohne zusätzlichen Text zurück:
+    {"adjectives": ["<adj1>", "<adj2>", ...]}
+    • Jedes Element muss ein Adjektiv in Kleinbuchstaben sein.
+    • Wenn der Satz keine Adjektive enthält, gib genau zurück:
+    {"adjectives": []}
+
+    Satz: "{sentence}"
+
+  fr: |-
+    Vous êtes un analyseur grammatical.
+    Retournez un JSON avec cette STRUCTURE EXACTE et sans texte supplémentaire :
+    {"adjectives": ["<adj1>", "<adj2>", ...]}
+    • Chaque élément doit être un adjectif en minuscules.
+    • Si la phrase ne contient aucun adjectif, renvoyez exactement :
+    {"adjectives": []}
+
+    Phrase : "{sentence}"
+
+  it: |-
+    Sei un analizzatore grammaticale.
+    Restituisci un JSON con questa STRUTTURA ESATTA e senza alcun testo extra:
+    {"adjectives": ["<adj1>", "<adj2>", ...]}
+    • Ogni elemento deve essere un aggettivo in minuscolo.
+    • Se la frase non contiene aggettivi, restituisci esattamente:
+    {"adjectives": []}
+
+    Frase: "{sentence}"
+
+  pt: |-
+    Você é um analisador gramatical.
+    Devolva um JSON com esta ESTRUTURA EXATA e sem texto extra:
+    {"adjectives": ["<adj1>", "<adj2>", ...]}
+    • Cada item deve ser um adjetivo em minúsculas.
+    • Se a frase não contiver adjetivos, devolva exatamente:
+    {"adjectives": []}
+
+    Frase: "{sentence}"
+
+  ru: |-
+    Вы — грамматический анализатор.
+    Верните JSON ТОЧНО такой структуры и без лишнего текста:
+    {"adjectives": ["<adj1>", "<adj2>", ...]}
+    • Каждый элемент должен быть прилагательным в нижнем регистре.
+    • Если в предложении нет прилагательных, верните точно:
+    {"adjectives": []}
+
+    Предложение: "{sentence}"
+
+prompts_change_adjectives:
+  es: |-
+    Eres un analizador morfológico especializado en adjetivos.
+    Recibirás un o unos adjetivos en cualquiera de sus formas flexionadas (por ejemplo, "verdes", "guapos", "guapas", "guapa") y debes determinar su forma base, es decir, la forma masculina singular.
+    Si en la lista de palabras hay alguna palabra que no sea un adjetivo, no la ignores, añadela sin modificacion.
+    Si en la lista aparece guapos, guapas, la salida debe ser guapo, guapo, es decir, quiero que indiques aunque se repita la forma base.
+    Devuelve un JSON con esta estructura EXACTA y sin ningún texto adicional:
+    {"base": "<forma_base, forma_base, palabra_no_adjetivo, ...>"}
+    • La "forma_base" y "palabra_no_adjetivo" deben estar en minúsculas.
+    
+    Adjetivo: "{adjective}"
+
+  en: |-
+    You are a morphological analyzer specialized in adjectives.
+    You will receive an adjective in any of its inflected forms (for example, "greens", "handsome", "handsomes", "handsome") and you must determine its base form, i.e., the masculine singular form.
+    If in the list guapos, guapas appear, the output should be guapo, guapo; that is, I want you to indicate it even if the base form is repeated.
+    If in the sentence there is any word that is not an adjective, do not ignore it, add it without modification.
+    Return a JSON with this EXACT structure and no extra text:
+    {"base": "<base_form,base_form>"}
+    • The "base_form" must be in lowercase.
+    
+    Adjective: "{adjective}"
+
+  de: |-
+    Du bist ein morphologischer Analysator, spezialisiert auf Adjektive.
+    Du erhältst ein Adjektiv in beliebiger gebeugter Form (zum Beispiel "grüne", "schöne", "schönen", "schön") und musst seine Grundform bestimmen, also die maskuline Singularform.
+    Falls in der Liste "guapos, guapas" erscheint, muss die Ausgabe "guapo, guapo" lauten; das heißt, du sollst es angeben, auch wenn sich die Grundform wiederholt.
+    Falls im Satz ein Wort vorkommt, das kein Adjektiv ist, ignoriere es nicht, sondern füge es unverändert hinzu.
+    Gib ein JSON mit genau dieser STRUKTUR und ohne zusätzlichen Text zurück:
+    {"base": "<grundform>"}
+    • Die "grundform" muss in Kleinbuchstaben sein.
+    
+    Adjektiv: "{adjective}"
+
+  fr: |-
+    Vous êtes un analyseur morphologique spécialisé dans les adjectifs.
+    Vous recevrez un adjectif sous n'importe quelle forme fléchie (par exemple, "verts", "beaux", "belles", "beau") et vous devez déterminer sa forme de base, c'est-à-dire la forme masculine singulière.
+    Si dans la liste apparaît "guapos, guapas", la sortie doit être "guapo, guapo" ; c'est-à-dire, je veux que vous l'indiquiez même si la forme de base se répète.
+    Si dans la phrase, il y a un mot qui n'est pas un adjectif, ne l'ignorez pas, ajoutez-le sans modification.
+    Retournez un JSON avec cette STRUCTURE EXACTE et sans texte supplémentaire:
+    {"base": "<forme_base>"}
+    • La "forme_base" doit être en minuscules.
+    
+    Adjectif: "{adjective}"
+
+  it: |-
+    Sei un analizzatore morfologico specializzato in aggettivi.
+    Riceverai un aggettivo in una qualsiasi delle sue forme flesse (ad esempio, "verdi", "belli", "belle", "bello") e devi determinarne la forma base, ossia la forma maschile singolare.
+    Se nella lista compaiono "guapos, guapas", l'output deve essere "guapo, guapo", ovvero, voglio che tu lo indichi anche se la forma base si ripete.
+    Se nella frase c'è una parola che non è un aggettivo, non ignorarla, aggiungila senza modifiche.
+    Restituisci un JSON con questa STRUTTURA ESATTA e senza alcun testo extra:
+    {"base": "<forma_base>"}
+    • La "forma_base" deve essere in minuscolo.
+    
+    Aggettivo: "{adjective}"
+
+  pt: |-
+    Você é um analisador morfológico especializado em adjetivos.
+    Receberá um adjetivo em qualquer uma de suas formas flexionadas (por exemplo, "verdes", "bonitos", "bonitas", "bonito") e deve determinar sua forma base, ou seja, a forma masculina singular.
+    Se na lista aparecer "guapos, guapas", a saída deve ser "guapo, guapo", ou seja, quero que indique mesmo que a forma base se repita.
+    Se na frase houver alguma palavra que não seja um adjetivo, não a ignore, adicione-a sem modificação.
+    Devolva um JSON com esta ESTRUTURA EXATA e sem texto extra:
+    {"base": "<forma_base>"}
+    • A "forma_base" deve estar em minúsculas.
+    
+    Adjetivo: "{adjective}"
+
+  ru: |-
+    Вы — морфологический анализатор, специализирующийся на прилагательных.
+    Вы получите прилагательное в любой его спряжённой форме (например, "зелёные", "красивые", "красивых", "красивый") и должны определить его исходную форму, то есть форму в мужском роде, единственного числа.
+    Если в списке появляются "guapos, guapas", вывод должен быть "guapo, guapo", то есть, я хочу, чтобы вы указали это, даже если форма основы повторяется.
+    Если в предложении есть слово, которое не является прилагательным, не игнорируйте его, а добавьте без изменений.
+    Верните JSON ТОЧНО такой структуры и без лишнего текста:
+    {"base": "<исходная_форма>"}
+    • "исходная_форма" должна быть в нижнем регистре.
+    
+    Прилагательное: "{adjective}"

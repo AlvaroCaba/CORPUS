@@ -1,0 +1,12 @@
+# Entornos virtuales
+.env/
+venv/
+# Byte-code
+__pycache__/
+*.py[cod]
+# Configuración de VS Code
+.vscode/
+# Archivos de entorno
+*.env
+#Archivos de datos
+data/
